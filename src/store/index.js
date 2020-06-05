@@ -1,6 +1,8 @@
-import { createStore } from 'redux'
+import { createStore , combineReducers} from 'redux'
 import { countReducer } from './producer/countProducer'
 
-const store = createStore(countReducer)
+const store = createStore(combineReducers({
+    count: countReducer
+}))
 
 export default store

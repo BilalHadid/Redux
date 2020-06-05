@@ -1,5 +1,5 @@
 const initialstate = {
-    count : 0
+    value : 0
 }
 
 
@@ -20,6 +20,6 @@ export const countReducer = (state = initialstate ,action) => {
                 ...state
             }
 
-            break;
+          
     }
 }

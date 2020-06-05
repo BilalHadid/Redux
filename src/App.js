@@ -7,7 +7,7 @@ function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>count value is {props.count}</h1>
+        <h1>count value is {props.count.value}</h1>
       </header>
     </div>
   );
