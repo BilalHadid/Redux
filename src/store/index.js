@@ -1,8 +1,9 @@
 import { createStore , combineReducers} from 'redux'
 import { countReducer } from './producer/countProducer'
 
-const store = createStore(combineReducers({
+const reducer = combineReducers({
     count: countReducer
-}))
+})
+const store = createStore(reducer)
 
 export default store
