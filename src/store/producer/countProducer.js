@@ -17,7 +17,7 @@ export const countReducer = (state = initialstate ,action) => {
         case "decrement_count":
             return{
                 ...state,
-                value: state.value - 1
+                value: state.value - action.Payload
             }
 
         default:
