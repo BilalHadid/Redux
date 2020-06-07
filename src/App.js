@@ -20,7 +20,7 @@ const mapstatetoprops = (state) => {
     }
 }
 const mapdispatchtoprops = (dispatch) => ({
-  increaseValue: () => dispatch({type:'increse_count'}),
+  increaseValue: () => dispatch({type:'increse_count',Payload:2}),
   decreaseValue: () => dispatch({type: 'decrement_count'})
 })
 
