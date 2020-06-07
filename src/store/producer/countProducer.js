@@ -1,5 +1,6 @@
 const initialstate = {
-    value : 0
+    value : 0,
+    anothervalue: 20
 }
 
 
@@ -8,12 +9,16 @@ export const countReducer = (state = initialstate ,action) => {
     switch(action.type) {
 
         case "increse_count":
-
-           break;
+            return{
+                ...state,
+                value: state.value + 1
+            }
         
         case "decrement_count":
-
-            break;
+            return{
+                ...state,
+                value: state.value - 1
+            }
 
         default:
             return {
