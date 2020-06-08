@@ -9,15 +9,29 @@ function App(props) {
     <div className="App">
       <header className="App-header">
         <h1>count value is {props.count.value}</h1>
+        <p>
         <button className="btn-primary" onClick={() => props.increaseValue(10)}>Increase Value</button>
+        </p>
+        <p>
         <button className='btn-danger' onClick={() => props.decreaseValue(2)}>Decrease Value</button>
+        </p>
+        
+        <hr></hr> 
+        
+        <h1>POST</h1>
+        <div>
+          {props.post.data.lenght? <div>{props.data.body}</div>:<div>There is no Post</div>}
+        </div>
+        
+
       </header>
     </div>
   );
 }
 const mapstatetoprops = (state) => {
     return{
-      count : state.count
+      count : state.count,
+      post: state.post
     }
 }
 const mapdispatchtoprops = (dispatch) => ({
