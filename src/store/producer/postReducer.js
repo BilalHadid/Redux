@@ -1,7 +1,7 @@
 import {postRed} from '../action/actionTypes.js'
 
 const initialState = {
-    data: [],
+    data: null,
     error: null,
     loading: false
 }

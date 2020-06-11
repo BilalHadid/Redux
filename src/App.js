@@ -21,7 +21,10 @@ function App(props) {
         
         <h1>POST</h1>
         <div>
-          {props.post.data.lenght? <div>{props.data.body}</div>:<div>There is no Post</div>}
+          {props.post.data? <div>{props.post.data.title}</div>:<div>There is no Post</div>}
+          <small>
+            {props.post.error && props.post.error}
+          </small>
         <p>
           <button onClick={props.getPost}>Get Post</button>
         </p>
