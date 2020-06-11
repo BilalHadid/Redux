@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {connect} from 'react-redux';
 import {increase_value , decrease_value} from './store/action/countAction.js'
+import {getPostMiddlewares} from './store/Middlewares/postMiddlewares.js'
 
 function App(props) {
   console.log(props)
@@ -21,8 +22,11 @@ function App(props) {
         <h1>POST</h1>
         <div>
           {props.post.data.lenght? <div>{props.data.body}</div>:<div>There is no Post</div>}
+        <p>
+          <button onClick={props.getPost}>Get Post</button>
+        </p>
         </div>
-        
+       
 
       </header>
     </div>
@@ -36,7 +40,8 @@ const mapstatetoprops = (state) => {
 }
 const mapdispatchtoprops = (dispatch) => ({
   increaseValue: (value) => dispatch(increase_value(value)),
-  decreaseValue: (value) => dispatch(decrease_value(value))
+  decreaseValue: (value) => dispatch(decrease_value(value)),
+  getPost: () => dispatch(getPostMiddlewares())
 })
 
 export default connect(mapstatetoprops,mapdispatchtoprops)(App);
